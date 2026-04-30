@@ -2,15 +2,15 @@
   "MicrosoftTelemetryConnectionString": "",
   "conditionalSettings": [
     {
-      "workflows": [
-        "CI/CD"
-      ],
       "settings": {
         "workflowConcurrency": [
           "group: ${{ github.workflow }}-${{ github.ref }}",
           "cancel-in-progress: true"
         ]
-      }
+      },
+      "workflows": [
+        "CI/CD"
+      ]
     }
   ],
   "UseProjectDependencies": true,
@@ -21,8 +21,8 @@
   "useCompilerFolder": true,
   "type": "PTE",
   "incrementalBuilds": {
-    "mode": "modifiedProjects",
-    "onPush": true
+    "mode": "modifiedApps",
+    "onPush": false
   },
   "doNotPublishApps": true,
   "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go/Actions/2b21a3d4898b539f1b6d1e5c35abceae233cb59b/.Modules/settings.schema.json",
