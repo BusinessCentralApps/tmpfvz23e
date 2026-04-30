@@ -1,31 +1,32 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go/Actions/2b21a3d4898b539f1b6d1e5c35abceae233cb59b/.Modules/settings.schema.json",
   "MicrosoftTelemetryConnectionString": "",
   "conditionalSettings": [
     {
+      "workflows": [
+        "CI/CD"
+      ],
       "settings": {
         "workflowConcurrency": [
           "group: ${{ github.workflow }}-${{ github.ref }}",
           "cancel-in-progress: true"
         ]
-      },
-      "workflows": [
-        "CI/CD"
-      ]
+      }
     }
   ],
   "UseProjectDependencies": true,
   "shell": "pwsh",
-  "templateUrl": "https://github.com/businesscentralapps/tmpTNmjxr-PTE@main",
+  "useApproximateVersion": true,
   "githubRunner": "ubuntu-latest",
   "githubRunnerShell": "pwsh",
   "useCompilerFolder": true,
   "type": "PTE",
-  "useApproximateVersion": true,
   "incrementalBuilds": {
+    "mode": "modifiedProjects",
     "onPush": true
   },
   "doNotPublishApps": true,
+  "$schema": "https://raw.githubusercontent.com/microsoft/AL-Go/Actions/2b21a3d4898b539f1b6d1e5c35abceae233cb59b/.Modules/settings.schema.json",
   "runs-on": "ubuntu-latest",
+  "templateUrl": "https://github.com/businesscentralapps/tmpTNmjxr-PTE@main",
   "templateSha": "b40e78d7cce65a8aeaa1afec14743e1dbb349fc3"
 }
